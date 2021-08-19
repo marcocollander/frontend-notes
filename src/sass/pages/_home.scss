@@ -1,3 +1,119 @@
+@import '../utils/variables';
+
 body {
-  background-color: $bg-color;
+  background-image: linear-gradient(to right top, #88988d, #93a399, #9fafa5, #abbab1, #b7c6bd);
+  font-family: $font-text;
+  color: $color-dark;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 22px;
+  text-transform: uppercase;
+  font-family: $font-header;
+  font-weight: 600;
+
+  span {
+    text-transform: none;
+    font-weight: 400;
+    color: lighten($color-dark, 20%);
+  }
+}
+
+/* Layout */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.sidebar, .posts {
+  padding: 40px;
+  background: $color-light;
+  border: 1px solid $color-dark;
+  border-radius: 5px;
+}
+
+/* Logo */
+
+.logo {
+  display: inline-block;
+  font-family: $font-logo;
+  font-weight: 600;
+  font-size: 42px;
+  color: $font-color-light;
+  word-spacing: 10px;
+}
+
+/* Lists */
+
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  a {
+    text-decoration: none;
+  }
+
+  .active {
+    font-weight: bold;
+  }
+}
+
+.list-horizontal {
+  li {
+    display: inline-block;
+  }
+}
+
+/* Authors */
+
+.authors {
+  li {
+    margin-bottom: 12px;
+  }
+}
+
+/* Post */
+
+.post {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  &__author {
+    font-style: italic;
+  }
+
+  &__tags{
+    display: flex;
+
+    p{
+      margin: 0 10px 0 0;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .wrapper {
+    flex-direction: row;
+  }
+
+  .posts {
+    flex: 2;
+  }
+
+  .sidebar {
+    flex: 1;
+  }
 }

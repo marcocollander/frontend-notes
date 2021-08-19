@@ -11,26 +11,19 @@
   <link rel="stylesheet" href="./dist/css/main.min.css">
 </head>
 <body>
+<header class="bar">
+  <button class="bar__btn-icon"><i class="fas fa-bars"></i></button>
+  <h1 class="logo">Notatki z frontendu</h1>
+</header>
+
 <nav class="nav">
-  <ul>
-    <li><a href="index.html">Start</a></li>
-    <li><a href="#">O mnie</a></li>
-    <li><a href="#">Blog</a></li>
-    <li><a href="#">Kontakt</a></li>
-  </ul>
+    <h2 class="nav__title">Rozdziały</h2>
+    <ul class="list titles"></ul>
 </nav>
-<button class="btn-icon"><i class="fas fa-bars"></i></button>
 
 <div class="blog">
   <div class="container">
-    <h1 class="logo">Notatki z javascript</h1>
-
     <main class="wrapper">
-      <aside class="sidebar">
-        <h2 class="section-title">All posts</h2>
-        <ul class="list titles"></ul>
-      </aside>
-
       <section class="posts">
         <article class="post active" id="article-1" data-tags="design tutorials" data-author="Marion Berry">
 
@@ -290,6 +283,6 @@
   </div>
 </div>
 
-<script src="./dist/js/app.min.js"></script>
+<script src="dist/js/app.min.js"></script>
 </body>
 </html>
